@@ -5,10 +5,7 @@ const models = require('../db/models')
 const Code = models.Code
 
 router.post('/', (req, res, next) => {
-  Code.findOrCreate({
-    where: req.body
-  })
-    .spread(code => code)
+  Code.create(req.body)
     .then((code) => {
       res.json(code)
     })

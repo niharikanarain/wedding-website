@@ -8,13 +8,20 @@ const Event = db.define('event', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  when: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
   location: {
     type: DataTypes.TEXT,
     allowNull: false
+  },
+  date: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  time: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  note: {
+    type: DataTypes.STRING
   }
 })
 
